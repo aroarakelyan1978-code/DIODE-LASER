@@ -34,7 +34,7 @@ body {
   min-height: 100vh;
   width: 100%;
   color: var(--ink);
-  font-family: "Manrope", sans-serif;
+  font-family: "Outfit", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   overscroll-behavior-x: none;
@@ -297,20 +297,21 @@ main > .section + .section::before {
 .booking-copy h2,
 .help-copy h2 {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  letter-spacing: -0.03em;
-  line-height: 0.98;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.96;
 }
 
 .hero h1 {
   margin: 0;
   max-width: 9.2ch;
-  font-family: "Manrope", sans-serif;
+  font-family: "Bodoni Moda", serif;
   font-size: clamp(3rem, 7vw, 5.8rem);
-  font-weight: 500;
-  line-height: 0.96;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  text-transform: none;
   color: #7f848a;
 }
 
@@ -533,11 +534,11 @@ main > .section + .section::before {
 
 .why-us-heading h2 {
   margin: 0;
-  font-family: "Manrope", sans-serif;
+  font-family: "Bodoni Moda", serif;
   font-size: clamp(2.3rem, 5vw, 4.2rem);
-  font-weight: 500;
-  line-height: 1.18;
-  letter-spacing: 0.01em;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
   color: #7f858b;
 }
 
@@ -920,10 +921,10 @@ main > .section + .section::before {
 }
 
 .footer-brand-copy strong {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Bodoni Moda", serif;
   font-size: 1.9rem;
   line-height: 0.9;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 .footer-brand-copy span {
