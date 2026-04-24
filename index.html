@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>An Yan Diode Laser</title>
+    <meta
+      name="description"
+      content="Licensed esthetician diode laser landing page for An Yan. Call or text 818-203-8752 or visit @diode_laserr on Instagram."
+    />
+    <link rel="icon" href="./site-assets/profile.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-left"></div>
+    <div class="page-glow page-glow-right"></div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="An Yan Diode Laser home">
+          <img
+            class="brand-mark"
+            src="./site-assets/profile.jpg"
+            alt="An Yan Diode Laser logo"
+          />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="#services">Why Laser</a>
+          <a href="#why-us">Why Choose Us</a>
+          <a href="#booking">Book</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <a class="header-phone" href="tel:+18182038752">Call 818-203-8752</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-shell">
+          <p class="hero-kicker">An Yan Diode Laser</p>
+          <h1>Laser hair removal near you</h1>
+          <p class="hero-subtitle">
+            Safe diode laser treatment with a direct booking path and pricing listed online for both women and men.
+          </p>
+
+          <div class="hero-detail-row">
+            <ul class="hero-checklist">
+              <li>Licensed esthetician treatment</li>
+              <li>Women&apos;s pricing listed online</li>
+              <li>Men&apos;s pricing listed online</li>
+            </ul>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#booking">Book Appointment</a>
+            <a
+              class="button button-ghost"
+              href="https://www.instagram.com/diode_laserr/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-panel">
+        <div class="section-heading">
+          <h2>Why Diode Laser</h2>
+          <p>
+            Diode laser sites usually lead with comfort, coverage, and booking clarity. This page now does the same.
+          </p>
+        </div>
+
+        <div class="benefits-grid" id="benefits-grid"></div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Why Laser</p>
+          <h2>Why laser beats waxing and shaving.</h2>
+          <p>
+            This section gives clients a fast side-by-side view of why diode laser is chosen for smoother skin, fewer ingrown hairs, and less constant upkeep.
+          </p>
+        </div>
+
+        <div class="comparison-grid" id="comparison-grid"></div>
+      </section>
+
+      <section class="section why-us-section" id="why-us">
+        <div class="why-us-heading">
+          <h2>Why Choose Us for Your Laser Hair Removal?</h2>
+        </div>
+
+        <div class="why-us-list" id="why-us-list"></div>
+      </section>
+
+      <section class="section booking-section" id="booking">
+        <div class="booking-copy">
+          <p class="eyebrow">Book Now</p>
+          <h2>Send a booking request with the right treatment details.</h2>
+          <p>
+            Fill out the form, choose the laser details when needed, then send the request by text. The message is prewritten with the key booking information.
+          </p>
+
+          <div class="booking-panel">
+            <div class="booking-links">
+              <a class="button button-primary" href="tel:+18182038752">Call Now</a>
+              <a
+                class="button button-ghost"
+                href="https://ig.me/m/diode_laserr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Message on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form class="booking-form" id="booking-form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Appointment type
+            <select name="service" id="service-select" required></select>
+          </label>
+
+          <div class="booking-extra" id="laser-booking-extra" hidden>
+            <p class="booking-extra-title">Laser details</p>
+
+            <label>
+              Client type
+              <select name="clientType" id="client-type-select">
+                <option value="">Select client type</option>
+                <option value="Women">Women</option>
+                <option value="Men">Men</option>
+              </select>
+            </label>
+
+            <label id="laser-area-label" hidden>
+              Treatment area and price
+              <select name="laserArea" id="laser-area-select"></select>
+            </label>
+          </div>
+
+          <label>
+            Preferred date
+            <input type="date" name="date" id="date-input" />
+          </label>
+
+          <label>
+            Preferred time
+            <select name="time" id="time-select" disabled>
+              <option value="">Select date first</option>
+            </select>
+          </label>
+          <p class="booking-time-status" id="booking-time-status" aria-live="polite"></p>
+
+          <button class="button button-primary button-full" type="submit">
+            Open Text Message
+          </button>
+        </form>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions clients usually ask before booking laser hair removal.</h2>
+        </div>
+
+        <div class="faq-grid" id="faq-grid"></div>
+      </section>
+
+      <section class="section help-section" id="help">
+        <div class="help-copy">
+          <p class="eyebrow">Need Help?</p>
+          <h2>Send a quick question directly.</h2>
+          <p>
+            If you need further help or you have additional questions, message here. Thank you.
+          </p>
+        </div>
+
+        <form class="help-form" id="help-form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+          </label>
+
+          <label>
+            Mobile number
+            <input
+              type="tel"
+              name="mobile"
+              placeholder="Your mobile number"
+              inputmode="tel"
+              autocomplete="tel"
+              required
+            />
+          </label>
+
+          <label>
+            Note
+            <textarea
+              name="note"
+              rows="5"
+              placeholder="Write your question here."
+              required
+            ></textarea>
+          </label>
+
+          <label class="help-consent">
+            <input type="checkbox" name="smsConsent" required />
+            <span>
+              I agree to receive a text reply about my question at the number above. Message and data rates may apply.
+              Reply STOP to opt out.
+            </span>
+          </label>
+
+          <button class="button button-primary button-full" type="submit">
+            Send Help Message
+          </button>
+
+          <p class="help-form-feedback" id="help-form-feedback" aria-live="polite" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="#top" aria-label="An Yan Diode Laser home">
+            <img
+              class="footer-brand-mark"
+              src="./site-assets/profile.jpg"
+              alt="An Yan Diode Laser logo"
+            />
+            <span class="footer-brand-copy">
+              <strong>An Yan</strong>
+              <span>Diode Laser</span>
+            </span>
+          </a>
+          <p class="footer-note">
+            Licensed esthetician diode laser appointments by phone, text, or Instagram.
+          </p>
+        </div>
+
+        <a class="footer-callout" href="tel:+18182038752">
+          <span class="footer-callout-label">Call or text</span>
+          <strong>+1 818 203 8752</strong>
+        </a>
+
+        <div class="footer-info-grid">
+          <article class="footer-info-card">
+            <div>
+              <strong>Appointments</strong>
+              <p>By appointment only. Booking requests are handled directly.</p>
+            </div>
+          </article>
+
+          <article class="footer-info-card">
+            <div>
+              <strong>Instagram</strong>
+              <p>
+                <a href="https://www.instagram.com/diode_laserr/" target="_blank" rel="noreferrer">
+                  @diode_laserr
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <article class="footer-info-card">
+            <div>
+              <strong>Customer service</strong>
+              <p>Phone and Instagram DM are the verified public contact methods.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
