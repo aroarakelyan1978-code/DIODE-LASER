@@ -136,17 +136,29 @@ main {
 }
 
 .header-instagram {
-  width: 3rem;
-  min-height: 3rem;
+  width: 3.35rem;
+  min-height: 3.35rem;
   padding: 0;
   justify-self: end;
   flex: 0 0 auto;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: var(--accent-deep);
 }
 
 .header-instagram svg {
-  width: 1.18rem;
-  height: 1.18rem;
+  width: 1.55rem;
+  height: 1.55rem;
   fill: currentColor;
+}
+
+.header-instagram:hover,
+.header-instagram:focus-visible {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: #bc5f84;
 }
 
 .menu-toggle {
@@ -1364,8 +1376,8 @@ code {
   }
 
   .header-instagram {
-    width: 2.8rem;
-    min-height: 2.8rem;
+    width: 3.05rem;
+    min-height: 3.05rem;
     padding: 0;
   }
 }
@@ -1407,7 +1419,7 @@ code {
   }
 
   .header-instagram {
-    width: 2.8rem;
+    width: 3.05rem;
     grid-column: auto;
     order: 4;
     justify-self: start;
@@ -1575,6 +1587,6 @@ code {
   }
 
   .header-instagram.button {
-    width: 2.8rem;
+    width: 3.05rem;
   }
 }
