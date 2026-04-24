@@ -109,44 +109,44 @@ const whyChooseUs = [
 
 const faqs = [
   {
-    question: "What is diode laser hair removal?",
+    question: "What kind of technology does An Yan Diode Laser use?",
     answer:
-      "It uses light energy to target the hair follicle and reduce hair growth over a series of sessions.",
+      "An Yan Diode Laser focuses on diode laser hair-removal technology designed for targeted hair reduction across common face and body areas.",
   },
   {
-    question: "Is diode laser good for different body areas?",
+    question: "What makes diode laser different from waxing or shaving?",
     answer:
-      "Yes. It is commonly used for face, underarms, bikini, legs, arms, back, and more.",
+      "Diode laser works on the follicle over a treatment plan, while shaving and waxing are short-term upkeep that keep coming back.",
   },
   {
-    question: "Does diode laser hurt?",
+    question: "What should I expect during a diode laser appointment?",
     answer:
-      "Most clients describe it as quick heat or small snaps, not the ongoing discomfort of waxing.",
+      "Your visit is focused on the treatment area, timing, and comfort. Most clients describe the feeling as quick heat or light snaps rather than ongoing waxing discomfort.",
+  },
+  {
+    question: "What makes An Yan Diode Laser different?",
+    answer:
+      "The process is kept simple: direct booking, visible pricing, targeted area selection, and easy contact by phone or Instagram.",
+  },
+  {
+    question: "Is An Yan Diode Laser a medical spa or a dermatology clinic?",
+    answer:
+      "An Yan Diode Laser is presented as a specialized diode laser beauty service, not a dermatology clinic. For skin diagnosis or medical treatment, a dermatologist is the right place.",
   },
   {
     question: "How many sessions are usually needed?",
     answer:
-      "Most clients need a series of sessions. The number depends on the area and hair growth.",
+      "Most clients need a series of sessions because hair grows in cycles. The exact number depends on the area, hair pattern, and consistency of visits.",
   },
   {
-    question: "Can diode laser help reduce ingrown hairs?",
+    question: "How should I prepare before treatment?",
     answer:
-      "Yes. Many clients choose it to help reduce ingrowns and shaving irritation over time.",
+      "Arrive with the area clean, avoid last-minute waxing, and use the booking or help form if you have questions before your visit.",
   },
   {
-    question: "Can I book by text?",
+    question: "Where can I see more of An Yan Diode Laser?",
     answer:
-      "Yes. The booking form opens a ready-to-send text message.",
-  },
-  {
-    question: "Are prices listed online?",
-    answer:
-      "Yes. Women’s and men’s pricing is listed in the booking flow.",
-  },
-  {
-    question: "Where can clients see more of the work?",
-    answer:
-      "On Instagram at @diode_laserr.",
+      "You can view more treatment content and updates on Instagram at @diode_laserr.",
   },
 ];
 
