@@ -33,9 +33,6 @@ const benefits = [
 
 const services = [
   {
-    title: "Consultation and booking call",
-  },
-  {
     title: "Laser appointment",
   },
 ];
