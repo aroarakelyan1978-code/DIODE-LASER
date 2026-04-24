@@ -136,10 +136,17 @@ main {
 }
 
 .header-instagram {
+  width: 3rem;
   min-height: 3rem;
-  padding-inline: 1.25rem;
+  padding: 0;
   justify-self: end;
-  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.header-instagram svg {
+  width: 1.18rem;
+  height: 1.18rem;
+  fill: currentColor;
 }
 
 .menu-toggle {
@@ -1357,9 +1364,9 @@ code {
   }
 
   .header-instagram {
+    width: 2.8rem;
     min-height: 2.8rem;
-    padding-inline: 0.95rem;
-    font-size: 0.84rem;
+    padding: 0;
   }
 }
 
@@ -1400,8 +1407,9 @@ code {
   }
 
   .header-instagram {
+    width: 2.8rem;
+    grid-column: auto;
     order: 4;
-    grid-column: 1 / -1;
     justify-self: start;
   }
 
@@ -1564,5 +1572,9 @@ code {
   .hero-actions,
   .booking-links {
     width: 100%;
+  }
+
+  .header-instagram.button {
+    width: 2.8rem;
   }
 }
