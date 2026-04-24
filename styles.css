@@ -1008,13 +1008,113 @@ main > .section + .section::before {
   border-top: 1px solid rgba(23, 18, 20, 0.08);
 }
 
-.footer-bottom p {
+.footer-bottom-inner {
   width: min(1180px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 0.9rem 0 0.95rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
   color: rgba(23, 18, 20, 0.52);
   font-size: 0.9rem;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.2rem;
+}
+
+.footer-legal a {
+  color: rgba(23, 18, 20, 0.7);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus-visible {
+  color: var(--accent-deep);
+}
+
+.legal-main {
+  width: min(980px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.4rem 0 3.8rem;
+}
+
+.legal-hero {
+  padding: 2.4rem 0 1.3rem;
+}
+
+.legal-hero h1 {
+  margin: 0 0 0.65rem;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(2.5rem, 6vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.legal-hero p {
+  margin: 0;
+  max-width: 38rem;
+  color: var(--muted);
+}
+
+.legal-updated {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: var(--accent-deep);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.legal-content {
+  display: grid;
+  gap: 1.55rem;
+}
+
+.legal-section {
+  padding-top: 1.55rem;
+  border-top: 1px solid rgba(23, 18, 20, 0.08);
+}
+
+.legal-section h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.legal-section p {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+}
+
+.legal-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+}
+
+.legal-list li + li {
+  margin-top: 0.42rem;
+}
+
+.legal-contact {
+  display: grid;
+  gap: 0.28rem;
+}
+
+.legal-contact p:last-child,
+.legal-section p:last-child {
+  margin-bottom: 0;
 }
 
 .header-inner {
@@ -1119,7 +1219,8 @@ main > .section + .section::before,
 .footer-note,
 .footer-info-card p,
 .footer-info-card a,
-.footer-bottom p {
+.footer-bottom p,
+.footer-legal a {
   color: var(--muted);
 }
 
@@ -1432,8 +1533,31 @@ code {
     grid-template-columns: 1fr;
   }
 
-  .footer-bottom p {
+  .footer-bottom-inner {
     width: min(100% - 1rem, 1180px);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom p {
+    width: auto;
+  }
+
+  .legal-main {
+    width: min(100% - 1rem, 980px);
+    padding-bottom: 3rem;
+  }
+
+  .legal-hero {
+    padding-top: 1.5rem;
+  }
+
+  .legal-hero h1 {
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
+  }
+
+  .legal-section {
+    padding-top: 1.2rem;
   }
 
   .button,
