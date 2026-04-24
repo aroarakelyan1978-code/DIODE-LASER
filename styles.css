@@ -135,6 +135,13 @@ main {
   color: var(--ink);
 }
 
+.header-instagram {
+  min-height: 3rem;
+  padding-inline: 1.25rem;
+  justify-self: end;
+  white-space: nowrap;
+}
+
 .menu-toggle {
   display: none;
   width: 3rem;
@@ -1221,7 +1228,7 @@ code {
 
   .header-inner {
     position: relative;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
   }
 
   .site-nav {
@@ -1246,6 +1253,12 @@ code {
   .header-phone {
     min-height: 2.8rem;
     padding: 0.72rem 0.9rem;
+  }
+
+  .header-instagram {
+    min-height: 2.8rem;
+    padding-inline: 0.95rem;
+    font-size: 0.84rem;
   }
 }
 
@@ -1278,6 +1291,17 @@ code {
 
   .hero h1 {
     font-size: clamp(2.35rem, 9vw, 3.7rem);
+  }
+
+  .header-inner {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.7rem;
+  }
+
+  .header-instagram {
+    order: 4;
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 
   .hero-subtitle {

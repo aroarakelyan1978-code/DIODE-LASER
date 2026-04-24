@@ -517,8 +517,6 @@ if (helpForm) {
     const name = (formData.get("name") || "").toString().trim();
     const mobile = (formData.get("mobile") || "").toString().trim();
     const note = (formData.get("note") || "").toString().trim();
-    const consent = formData.get("smsConsent") === "on";
-
     if (!name) {
       helpForm.querySelector('input[name="name"]')?.focus();
       return;
@@ -531,12 +529,6 @@ if (helpForm) {
 
     if (!note) {
       helpForm.querySelector('textarea[name="note"]')?.focus();
-      return;
-    }
-
-    if (!consent) {
-      helpForm.querySelector('input[name="smsConsent"]')?.focus();
-      setHelpFormFeedback("Please agree to receive a text reply before sending.");
       return;
     }
 
@@ -554,7 +546,7 @@ if (helpForm) {
         name,
         mobile,
         note,
-        consent,
+        consent: true,
       }),
     })
       .then(async (response) => {
