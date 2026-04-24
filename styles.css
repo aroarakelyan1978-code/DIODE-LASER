@@ -1462,11 +1462,13 @@ code {
     display: none;
   }
 
-  .booking-location-note {
+  .booking-copy .booking-location-note {
+    display: block;
+    max-width: 100%;
     margin-bottom: 0.9rem;
-    font-size: 0.66rem;
-    letter-spacing: 0.12em;
-    line-height: 1.5;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    line-height: 1.55;
   }
 
   .phone-language {
