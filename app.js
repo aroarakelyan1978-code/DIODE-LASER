@@ -14,24 +14,20 @@ const profile = {
 
 const benefits = [
   {
-    title: "Permanent reduction focus",
-    description:
-      "Diode laser is commonly chosen for long-term hair reduction across repeated treatment sessions.",
+    title: "Long-term results",
+    description: "Built for long-term hair reduction.",
   },
   {
-    title: "Face and body treatment flow",
-    description:
-      "Common treatment areas are grouped clearly so clients can move from interest to booking faster.",
+    title: "Face and body areas",
+    description: "Popular areas are easy to browse.",
   },
   {
-    title: "Minimal booking friction",
-    description:
-      "Call, text, and Instagram remain visible throughout the page so clients can contact An Yan immediately.",
+    title: "Easy booking",
+    description: "Call, text, or book online fast.",
   },
   {
-    title: "Service-first experience",
-    description:
-      "The layout prioritizes treatment information, appointment options, and contact instead of visual clutter.",
+    title: "Clean service flow",
+    description: "Simple layout. Clear next steps.",
   },
 ];
 
@@ -66,51 +62,51 @@ const laserPricing = {
 
 const comparisons = [
   {
-    laser: "A short series of sessions supports long-term hair reduction.",
-    traditional: "Shaving every few days or waxing again and again becomes an ongoing routine.",
+    laser: "A short series supports long-term reduction.",
+    traditional: "Shaving and waxing become a constant routine.",
   },
   {
-    laser: "Smoother skin and fewer ingrown hairs over time.",
-    traditional: "Razor burn, irritation, and painful ingrown hairs are common complaints.",
+    laser: "Smoother skin and fewer ingrowns.",
+    traditional: "Razor burn and ingrowns are common.",
   },
   {
-    laser: "Hair can become finer and less visible through repeated sessions.",
-    traditional: "Stubble often comes back quickly after shaving.",
+    laser: "Hair gets finer over time.",
+    traditional: "Stubble comes back fast.",
   },
   {
-    laser: "After completing a plan, clients usually spend far less time thinking about hair removal.",
-    traditional: "Hair-removal upkeep keeps returning to the weekly schedule.",
+    laser: "Less time spent on upkeep.",
+    traditional: "Upkeep keeps coming back every week.",
   },
   {
-    laser: "A longer-term investment in time, comfort, and confidence.",
-    traditional: "Razors, wax appointments, and home products can become a constant expense.",
+    laser: "Better for time, comfort, and confidence.",
+    traditional: "Razors and wax visits keep costing more.",
   },
 ];
 
 const whyChooseUs = [
   {
-    title: "Long-term hair reduction",
-    description: "Diode laser is commonly chosen for smoother skin and longer-lasting results across repeated sessions.",
+    title: "Long-term reduction",
+    description: "Smoother skin over a full plan.",
   },
   {
-    title: "Suitable for different skin tones",
-    description: "Treatment settings can be adjusted based on the client, the area being treated, and the overall service plan.",
+    title: "Different skin tones",
+    description: "Settings are adjusted by client and area.",
   },
   {
-    title: "Comfort-focused appointments",
-    description: "Sessions are designed to feel clean, direct, and professional from consultation through treatment.",
+    title: "Comfort-focused",
+    description: "Clean, direct, professional sessions.",
   },
   {
     title: "Minimal downtime",
-    description: "Most clients return to their day right after the appointment with no complicated recovery routine.",
+    description: "Most clients go right back to their day.",
   },
   {
-    title: "Direct contact and faster booking",
-    description: "Phone, text, and Instagram stay visible throughout the page so questions and booking requests can happen quickly.",
+    title: "Fast contact",
+    description: "Phone, text, and Instagram stay easy to reach.",
   },
   {
-    title: "Clear pricing path",
-    description: "Women’s and men’s laser pricing is shown directly in the booking flow so clients can choose an area before sending the request.",
+    title: "Clear pricing",
+    description: "Pricing appears right in the booking flow.",
   },
 ];
 
@@ -118,42 +114,42 @@ const faqs = [
   {
     question: "What is diode laser hair removal?",
     answer:
-      "Diode laser hair removal uses concentrated light energy to target pigment in the hair follicle. Over a series of sessions, it helps reduce unwanted hair growth in treated areas.",
+      "It uses light energy to target the hair follicle and reduce hair growth over a series of sessions.",
   },
   {
     question: "Is diode laser good for different body areas?",
     answer:
-      "Yes. Diode laser is commonly used for face, underarms, bikini areas, legs, arms, back, and other treatment zones depending on the client request.",
+      "Yes. It is commonly used for face, underarms, bikini, legs, arms, back, and more.",
   },
   {
     question: "Does diode laser hurt?",
     answer:
-      "Comfort levels vary by person and treatment area, but most clients describe it as quick heat or snapping sensations rather than the ongoing discomfort of waxing.",
+      "Most clients describe it as quick heat or small snaps, not the ongoing discomfort of waxing.",
   },
   {
     question: "How many sessions are usually needed?",
     answer:
-      "Most clients expect a series of sessions rather than one visit. The exact number depends on the area, hair density, and growth cycle.",
+      "Most clients need a series of sessions. The number depends on the area and hair growth.",
   },
   {
     question: "Can diode laser help reduce ingrown hairs?",
     answer:
-      "Many clients choose laser hair removal because reducing hair growth can also help reduce shaving-related irritation and ingrown hairs over time.",
+      "Yes. Many clients choose it to help reduce ingrowns and shaving irritation over time.",
   },
   {
     question: "Can I book by text?",
     answer:
-      "Yes. This site is set up so the form opens a ready-to-send text message directly to the booking number.",
+      "Yes. The booking form opens a ready-to-send text message.",
   },
   {
     question: "Are prices listed online?",
     answer:
-      "Yes. The booking flow now includes listed pricing for women’s and men’s laser areas, including women’s full body at $150.",
+      "Yes. Women’s and men’s pricing is listed in the booking flow.",
   },
   {
     question: "Where can clients see more of the work?",
     answer:
-      "The Instagram handle stays on the landing page so clients can go directly to the public profile for reels and highlights.",
+      "On Instagram at @diode_laserr.",
   },
 ];
 
