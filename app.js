@@ -228,6 +228,66 @@ const setHelpFormFeedback = (message) => {
   helpFormFeedback.hidden = !message;
 };
 
+const isAppleMobile = () => {
+  const userAgent = window.navigator.userAgent || "";
+  return /iPhone|iPad|iPod/i.test(userAgent)
+    || (/Macintosh/i.test(userAgent) && window.navigator.maxTouchPoints > 1);
+};
+
+const buildSmsUrl = (phoneNumber, message) => {
+  const separator = isAppleMobile() ? "&" : "?";
+  return `sms:${phoneNumber}${separator}body=${encodeURIComponent(message)}`;
+};
+
+const openSmsComposer = (phoneNumber, message) => {
+  if (!phoneNumber) {
+    return;
+  }
+
+  const smsUrl = buildSmsUrl(phoneNumber, message);
+  const smsLink = document.createElement("a");
+  smsLink.href = smsUrl;
+  smsLink.style.display = "none";
+  document.body.appendChild(smsLink);
+  smsLink.click();
+  smsLink.remove();
+
+  window.setTimeout(() => {
+    if (document.visibilityState === "visible") {
+      window.location.assign(smsUrl);
+    }
+  }, 250);
+};
+
+const buildBookingMessage = ({ name, service, clientType, laserArea, date, time }) => {
+  const messageLines = [
+    `Hi ${profile.name}, I found your website and would like to book an appointment.`,
+    `Name: ${name || "Not provided"}`,
+    `Appointment type: ${service || "Not selected"}`,
+    `Preferred date: ${date || "Flexible"}`,
+    `Preferred time: ${time || "Flexible"}`,
+  ];
+
+  if (service === "Laser appointment") {
+    messageLines.splice(
+      3,
+      0,
+      `Client type: ${clientType || "Not selected"}`,
+      `Laser area: ${laserArea || "Not selected"}`,
+    );
+  }
+
+  return messageLines.join("\n");
+};
+
+const buildHelpMessage = ({ name, mobile, note }) =>
+  [
+    `Hi ${profile.name}, I have a question from the website.`,
+    `Name: ${name || "Not provided"}`,
+    `Mobile: ${mobile || "Not provided"}`,
+    `Question: ${note || "Not provided"}`,
+  ].join("\n");
+
 const renderTimeOptions = (dateValue) => {
   const currentValue = timeSelect.value;
 
@@ -477,29 +537,12 @@ bookingForm.addEventListener("submit", (event) => {
     return;
   }
 
-  const messageLines = [
-    `Hi ${profile.name}, I found your website and would like to book an appointment.`,
-    `Name: ${name || "Not provided"}`,
-    `Appointment type: ${service || "Not selected"}`,
-    `Preferred date: ${date || "Flexible"}`,
-    `Preferred time: ${time || "Flexible"}`,
-  ];
-
-  if (service === "Laser appointment") {
-    messageLines.splice(
-      3,
-      0,
-      `Client type: ${clientType || "Not selected"}`,
-      `Laser area: ${laserArea || "Not selected"}`,
-    );
-  }
-
   markSlotBooked(date, time);
   renderTimeOptions(date);
-
-  const message = encodeURIComponent(messageLines.join("\n"));
-  const smsUrl = `sms:${profile.phoneDial}?body=${message}`;
-  window.location.href = smsUrl;
+  openSmsComposer(
+    profile.phoneDial,
+    buildBookingMessage({ name, service, clientType, laserArea, date, time }),
+  );
 });
 
 if (helpForm) {
@@ -553,6 +596,18 @@ if (helpForm) {
         const payload = await response.json().catch(() => ({}));
 
         if (!response.ok) {
+          if (response.status === 503) {
+            helpForm.reset();
+            setHelpFormFeedback("");
+            openSmsComposer(profile.phoneDial, buildHelpMessage({ name, mobile, note }));
+
+            if (helpSubmitButton) {
+              helpSubmitButton.textContent = defaultHelpButtonLabel;
+            }
+
+            return;
+          }
+
           throw new Error(payload.error || "Unable to send your message right now.");
         }
 
@@ -571,7 +626,14 @@ if (helpForm) {
           error && typeof error.message === "string" && error.message
             ? error.message
             : "Unable to send your message right now. Please call or text instead.";
-        setHelpFormFeedback(message);
+
+        if (/Failed to fetch|NetworkError|Load failed/i.test(message)) {
+          helpForm.reset();
+          setHelpFormFeedback("");
+          openSmsComposer(profile.phoneDial, buildHelpMessage({ name, mobile, note }));
+        } else {
+          setHelpFormFeedback(message);
+        }
 
         if (helpSubmitButton) {
           helpSubmitButton.textContent = defaultHelpButtonLabel;
