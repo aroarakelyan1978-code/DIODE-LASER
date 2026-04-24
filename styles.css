@@ -747,19 +747,7 @@ main > .section + .section::before {
 .booking-extra {
   display: grid;
   gap: 0.85rem;
-  padding: 0.15rem 0 0.2rem;
-}
-
-.booking-extra-title {
-  margin: 0;
-  padding-top: 0.85rem;
-  border-top: 1px solid rgba(17, 17, 17, 0.1);
-  color: #111111;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  line-height: 1.1;
-  text-transform: uppercase;
+  padding: 0;
 }
 
 .booking-extra-note {
@@ -1058,7 +1046,6 @@ main > .section + .section::before,
 .footer-info-card strong,
 .footer-brand-copy strong,
 .booking-form label,
-.booking-extra-title,
 .panel-chip,
 .contact-label,
 .service-price,
@@ -1072,8 +1059,7 @@ main > .section + .section::before,
 .comparison-cell,
 .faq-item,
 .faq-item:first-child,
-.booking-panel,
-.booking-extra-title {
+.booking-panel {
   border-color: rgba(239, 179, 155, 0.16);
 }
 
